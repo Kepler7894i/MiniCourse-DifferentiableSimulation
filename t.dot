@@ -1,0 +1,845 @@
+digraph G {
+rankdir = TB;
+compound = true;
+label = <<b><br/>Computation main.95</b>>;
+labelloc = t;
+// Disable the tooltip.  Interestingly, "" doesn't work!
+tooltip = " ";
+// DOT graphs accept a stylesheet as a URI.  So naturally, an inline
+// stylesheet is a data URI!
+stylesheet=<
+  data:text/css,
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+  svg text {
+    font-family: 'Roboto';
+    font-size: 12px;
+  }
+
+    %23node43:hover ~ %23edge53 text { fill: %231976d2; }
+  %23node43:hover ~ %23edge53 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node43:hover ~ %23edge53 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node45:hover ~ %23edge53 text { fill: %23d32f2f; }
+  %23node45:hover ~ %23edge53 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node45:hover ~ %23edge53 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node43:hover ~ %23edge52 text { fill: %231976d2; }
+  %23node43:hover ~ %23edge52 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node43:hover ~ %23edge52 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node44:hover ~ %23edge52 text { fill: %23d32f2f; }
+  %23node44:hover ~ %23edge52 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node44:hover ~ %23edge52 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node42:hover ~ %23edge50 text { fill: %231976d2; }
+  %23node42:hover ~ %23edge50 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node42:hover ~ %23edge50 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node43:hover ~ %23edge50 text { fill: %23d32f2f; }
+  %23node43:hover ~ %23edge50 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node43:hover ~ %23edge50 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node40:hover ~ %23edge47 text { fill: %231976d2; }
+  %23node40:hover ~ %23edge47 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node40:hover ~ %23edge47 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node41:hover ~ %23edge47 text { fill: %23d32f2f; }
+  %23node41:hover ~ %23edge47 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node41:hover ~ %23edge47 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node24:hover ~ %23edge46 text { fill: %231976d2; }
+  %23node24:hover ~ %23edge46 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node24:hover ~ %23edge46 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node39:hover ~ %23edge46 text { fill: %23d32f2f; }
+  %23node39:hover ~ %23edge46 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node39:hover ~ %23edge46 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node27:hover ~ %23edge42 text { fill: %231976d2; }
+  %23node27:hover ~ %23edge42 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node27:hover ~ %23edge42 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node37:hover ~ %23edge42 text { fill: %23d32f2f; }
+  %23node37:hover ~ %23edge42 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node37:hover ~ %23edge42 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node35:hover ~ %23edge41 text { fill: %231976d2; }
+  %23node35:hover ~ %23edge41 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node35:hover ~ %23edge41 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node36:hover ~ %23edge41 text { fill: %23d32f2f; }
+  %23node36:hover ~ %23edge41 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node36:hover ~ %23edge41 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node34:hover ~ %23edge39 text { fill: %231976d2; }
+  %23node34:hover ~ %23edge39 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node34:hover ~ %23edge39 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node35:hover ~ %23edge39 text { fill: %23d32f2f; }
+  %23node35:hover ~ %23edge39 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node35:hover ~ %23edge39 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node25:hover ~ %23edge38 text { fill: %231976d2; }
+  %23node25:hover ~ %23edge38 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node25:hover ~ %23edge38 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node34:hover ~ %23edge38 text { fill: %23d32f2f; }
+  %23node34:hover ~ %23edge38 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node34:hover ~ %23edge38 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node30:hover ~ %23edge37 text { fill: %231976d2; }
+  %23node30:hover ~ %23edge37 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node30:hover ~ %23edge37 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node34:hover ~ %23edge37 text { fill: %23d32f2f; }
+  %23node34:hover ~ %23edge37 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node34:hover ~ %23edge37 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node31:hover ~ %23edge34 text { fill: %231976d2; }
+  %23node31:hover ~ %23edge34 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node31:hover ~ %23edge34 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node32:hover ~ %23edge34 text { fill: %23d32f2f; }
+  %23node32:hover ~ %23edge34 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node32:hover ~ %23edge34 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node26:hover ~ %23edge33 text { fill: %231976d2; }
+  %23node26:hover ~ %23edge33 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node26:hover ~ %23edge33 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node31:hover ~ %23edge33 text { fill: %23d32f2f; }
+  %23node31:hover ~ %23edge33 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node31:hover ~ %23edge33 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node30:hover ~ %23edge32 text { fill: %231976d2; }
+  %23node30:hover ~ %23edge32 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node30:hover ~ %23edge32 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node31:hover ~ %23edge32 text { fill: %23d32f2f; }
+  %23node31:hover ~ %23edge32 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node31:hover ~ %23edge32 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node36:hover ~ %23edge45 text { fill: %231976d2; }
+  %23node36:hover ~ %23edge45 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node36:hover ~ %23edge45 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node38:hover ~ %23edge45 text { fill: %23d32f2f; }
+  %23node38:hover ~ %23edge45 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node38:hover ~ %23edge45 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node37:hover ~ %23edge44 text { fill: %231976d2; }
+  %23node37:hover ~ %23edge44 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node37:hover ~ %23edge44 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node38:hover ~ %23edge44 text { fill: %23d32f2f; }
+  %23node38:hover ~ %23edge44 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node38:hover ~ %23edge44 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node28:hover ~ %23edge31 text { fill: %231976d2; }
+  %23node28:hover ~ %23edge31 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node28:hover ~ %23edge31 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node30:hover ~ %23edge31 text { fill: %23d32f2f; }
+  %23node30:hover ~ %23edge31 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node30:hover ~ %23edge31 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node38:hover ~ %23edge30 text { fill: %231976d2; }
+  %23node38:hover ~ %23edge30 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node38:hover ~ %23edge30 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node39:hover ~ %23edge30 text { fill: %23d32f2f; }
+  %23node39:hover ~ %23edge30 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node39:hover ~ %23edge30 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node10:hover ~ %23edge13 text { fill: %231976d2; }
+  %23node10:hover ~ %23edge13 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node10:hover ~ %23edge13 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node11:hover ~ %23edge13 text { fill: %23d32f2f; }
+  %23node11:hover ~ %23edge13 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node11:hover ~ %23edge13 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node7:hover ~ %23edge12 text { fill: %231976d2; }
+  %23node7:hover ~ %23edge12 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node7:hover ~ %23edge12 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node11:hover ~ %23edge12 text { fill: %23d32f2f; }
+  %23node11:hover ~ %23edge12 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node11:hover ~ %23edge12 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node33:hover ~ %23edge43 text { fill: %231976d2; }
+  %23node33:hover ~ %23edge43 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node33:hover ~ %23edge43 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node37:hover ~ %23edge43 text { fill: %23d32f2f; }
+  %23node37:hover ~ %23edge43 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node37:hover ~ %23edge43 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node8:hover ~ %23edge15 text { fill: %231976d2; }
+  %23node8:hover ~ %23edge15 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node8:hover ~ %23edge15 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node12:hover ~ %23edge15 text { fill: %23d32f2f; }
+  %23node12:hover ~ %23edge15 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node12:hover ~ %23edge15 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node8:hover ~ %23edge9 text { fill: %231976d2; }
+  %23node8:hover ~ %23edge9 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node8:hover ~ %23edge9 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node9:hover ~ %23edge9 text { fill: %23d32f2f; }
+  %23node9:hover ~ %23edge9 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node9:hover ~ %23edge9 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node11:hover ~ %23edge14 text { fill: %231976d2; }
+  %23node11:hover ~ %23edge14 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node11:hover ~ %23edge14 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node12:hover ~ %23edge14 text { fill: %23d32f2f; }
+  %23node12:hover ~ %23edge14 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node12:hover ~ %23edge14 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node5:hover ~ %23edge22 text { fill: %231976d2; }
+  %23node5:hover ~ %23edge22 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node5:hover ~ %23edge22 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node19:hover ~ %23edge22 text { fill: %23d32f2f; }
+  %23node19:hover ~ %23edge22 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node19:hover ~ %23edge22 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node6:hover ~ %23edge10 text { fill: %231976d2; }
+  %23node6:hover ~ %23edge10 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node6:hover ~ %23edge10 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node9:hover ~ %23edge10 text { fill: %23d32f2f; }
+  %23node9:hover ~ %23edge10 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node9:hover ~ %23edge10 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node29:hover ~ %23edge35 text { fill: %231976d2; }
+  %23node29:hover ~ %23edge35 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node29:hover ~ %23edge35 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node32:hover ~ %23edge35 text { fill: %23d32f2f; }
+  %23node32:hover ~ %23edge35 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node32:hover ~ %23edge35 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node12:hover ~ %23edge7 text { fill: %231976d2; }
+  %23node12:hover ~ %23edge7 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node12:hover ~ %23edge7 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node13:hover ~ %23edge7 text { fill: %23d32f2f; }
+  %23node13:hover ~ %23edge7 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node13:hover ~ %23edge7 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node21:hover ~ %23edge27 text { fill: %231976d2; }
+  %23node21:hover ~ %23edge27 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node21:hover ~ %23edge27 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node22:hover ~ %23edge27 text { fill: %23d32f2f; }
+  %23node22:hover ~ %23edge27 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node22:hover ~ %23edge27 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node17:hover ~ %23edge6 text { fill: %231976d2; }
+  %23node17:hover ~ %23edge6 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node17:hover ~ %23edge6 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node19:hover ~ %23edge6 text { fill: %23d32f2f; }
+  %23node19:hover ~ %23edge6 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node19:hover ~ %23edge6 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node1:hover ~ %23edge5 text { fill: %231976d2; }
+  %23node1:hover ~ %23edge5 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node1:hover ~ %23edge5 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node5:hover ~ %23edge5 text { fill: %23d32f2f; }
+  %23node5:hover ~ %23edge5 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node5:hover ~ %23edge5 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node9:hover ~ %23edge11 text { fill: %231976d2; }
+  %23node9:hover ~ %23edge11 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node9:hover ~ %23edge11 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node10:hover ~ %23edge11 text { fill: %23d32f2f; }
+  %23node10:hover ~ %23edge11 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node10:hover ~ %23edge11 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node15:hover ~ %23edge20 text { fill: %231976d2; }
+  %23node15:hover ~ %23edge20 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node15:hover ~ %23edge20 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node17:hover ~ %23edge20 text { fill: %23d32f2f; }
+  %23node17:hover ~ %23edge20 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node17:hover ~ %23edge20 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node2:hover ~ %23edge4 text { fill: %231976d2; }
+  %23node2:hover ~ %23edge4 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node2:hover ~ %23edge4 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node5:hover ~ %23edge4 text { fill: %23d32f2f; }
+  %23node5:hover ~ %23edge4 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node5:hover ~ %23edge4 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node7:hover ~ %23edge8 text { fill: %231976d2; }
+  %23node7:hover ~ %23edge8 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node7:hover ~ %23edge8 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node8:hover ~ %23edge8 text { fill: %23d32f2f; }
+  %23node8:hover ~ %23edge8 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node8:hover ~ %23edge8 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node41:hover ~ %23edge26 text { fill: %231976d2; }
+  %23node41:hover ~ %23edge26 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node41:hover ~ %23edge26 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node43:hover ~ %23edge26 text { fill: %23d32f2f; }
+  %23node43:hover ~ %23edge26 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node43:hover ~ %23edge26 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node13:hover ~ %23edge16 text { fill: %231976d2; }
+  %23node13:hover ~ %23edge16 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node13:hover ~ %23edge16 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node14:hover ~ %23edge16 text { fill: %23d32f2f; }
+  %23node14:hover ~ %23edge16 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node14:hover ~ %23edge16 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node23:hover ~ %23edge29 text { fill: %231976d2; }
+  %23node23:hover ~ %23edge29 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node23:hover ~ %23edge29 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node24:hover ~ %23edge29 text { fill: %23d32f2f; }
+  %23node24:hover ~ %23edge29 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node24:hover ~ %23edge29 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node32:hover ~ %23edge36 text { fill: %231976d2; }
+  %23node32:hover ~ %23edge36 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node32:hover ~ %23edge36 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node33:hover ~ %23edge36 text { fill: %23d32f2f; }
+  %23node33:hover ~ %23edge36 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node33:hover ~ %23edge36 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node14:hover ~ %23edge17 text { fill: %231976d2; }
+  %23node14:hover ~ %23edge17 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node14:hover ~ %23edge17 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node15:hover ~ %23edge17 text { fill: %23d32f2f; }
+  %23node15:hover ~ %23edge17 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node15:hover ~ %23edge17 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node13:hover ~ %23edge19 text { fill: %231976d2; }
+  %23node13:hover ~ %23edge19 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node13:hover ~ %23edge19 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node17:hover ~ %23edge19 text { fill: %23d32f2f; }
+  %23node17:hover ~ %23edge19 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node17:hover ~ %23edge19 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node39:hover ~ %23edge49 text { fill: %231976d2; }
+  %23node39:hover ~ %23edge49 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node39:hover ~ %23edge49 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node41:hover ~ %23edge49 text { fill: %23d32f2f; }
+  %23node41:hover ~ %23edge49 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node41:hover ~ %23edge49 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node39:hover ~ %23edge48 text { fill: %231976d2; }
+  %23node39:hover ~ %23edge48 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node39:hover ~ %23edge48 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node41:hover ~ %23edge48 text { fill: %23d32f2f; }
+  %23node41:hover ~ %23edge48 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node41:hover ~ %23edge48 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node28:hover ~ %23edge40 text { fill: %231976d2; }
+  %23node28:hover ~ %23edge40 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node28:hover ~ %23edge40 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node36:hover ~ %23edge40 text { fill: %23d32f2f; }
+  %23node36:hover ~ %23edge40 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node36:hover ~ %23edge40 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node4:hover ~ %23edge25 text { fill: %231976d2; }
+  %23node4:hover ~ %23edge25 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node4:hover ~ %23edge25 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node20:hover ~ %23edge25 text { fill: %23d32f2f; }
+  %23node20:hover ~ %23edge25 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node20:hover ~ %23edge25 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node16:hover ~ %23edge18 text { fill: %231976d2; }
+  %23node16:hover ~ %23edge18 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node16:hover ~ %23edge18 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node17:hover ~ %23edge18 text { fill: %23d32f2f; }
+  %23node17:hover ~ %23edge18 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node17:hover ~ %23edge18 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node1:hover ~ %23edge2 text { fill: %231976d2; }
+  %23node1:hover ~ %23edge2 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node1:hover ~ %23edge2 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node3:hover ~ %23edge2 text { fill: %23d32f2f; }
+  %23node3:hover ~ %23edge2 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node3:hover ~ %23edge2 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node1:hover ~ %23edge1 text { fill: %231976d2; }
+  %23node1:hover ~ %23edge1 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node1:hover ~ %23edge1 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node3:hover ~ %23edge1 text { fill: %23d32f2f; }
+  %23node3:hover ~ %23edge1 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node3:hover ~ %23edge1 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node3:hover ~ %23edge3 text { fill: %231976d2; }
+  %23node3:hover ~ %23edge3 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node3:hover ~ %23edge3 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node4:hover ~ %23edge3 text { fill: %23d32f2f; }
+  %23node4:hover ~ %23edge3 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node4:hover ~ %23edge3 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node19:hover ~ %23edge23 text { fill: %231976d2; }
+  %23node19:hover ~ %23edge23 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node19:hover ~ %23edge23 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node20:hover ~ %23edge23 text { fill: %23d32f2f; }
+  %23node20:hover ~ %23edge23 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node20:hover ~ %23edge23 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node1:hover ~ %23edge24 text { fill: %231976d2; }
+  %23node1:hover ~ %23edge24 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node1:hover ~ %23edge24 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node20:hover ~ %23edge24 text { fill: %23d32f2f; }
+  %23node20:hover ~ %23edge24 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node20:hover ~ %23edge24 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node20:hover ~ %23edge51 text { fill: %231976d2; }
+  %23node20:hover ~ %23edge51 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node20:hover ~ %23edge51 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node43:hover ~ %23edge51 text { fill: %23d32f2f; }
+  %23node43:hover ~ %23edge51 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node43:hover ~ %23edge51 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node18:hover ~ %23edge21 text { fill: %231976d2; }
+  %23node18:hover ~ %23edge21 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node18:hover ~ %23edge21 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node19:hover ~ %23edge21 text { fill: %23d32f2f; }
+  %23node19:hover ~ %23edge21 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node19:hover ~ %23edge21 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+  %23node22:hover ~ %23edge28 text { fill: %231976d2; }
+  %23node22:hover ~ %23edge28 path { stroke: %231976d2; stroke-width: .2em; }
+  %23node22:hover ~ %23edge28 polygon { fill: %231976d2; stroke: %231976d2; stroke-width: .2em; }
+
+  %23node23:hover ~ %23edge28 text { fill: %23d32f2f; }
+  %23node23:hover ~ %23edge28 path { stroke: %23d32f2f; stroke-width: .2em; }
+  %23node23:hover ~ %23edge28 polygon { fill: %23d32f2f; stroke: %23d32f2f; stroke-width: .2em; }
+
+>
+
+971379104 [label=<<b>Parameter 0</b><br/>f32[]>, shape=rect, tooltip="x", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+969146624 [label=<<b>broadcast.3</b><br/>dimensions={}<br/>f32[99]<br/><b>operand</b> = f32[] 0>, shape=rect, tooltip="", style="filled", fontcolor="black", color="#cbc693", fillcolor="#fff9c4"];
+971491984 [label=<<b>multiply.7</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/mul
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971515408 [label=<<b>divide.8</b><br/>f32[]<br/><b>operand 0</b> = f32[] 1>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/div
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971519056 [label=<<b>tuple.40</b><br/>(s32[], f32[], f32[99], f32[])<br/><b>operand 0</b> = s32[] 0<br/><b>operand 1</b> = f32[] 1>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/while
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+subgraph cluster_971502144 {
+style=rounded; color=black;
+label = <Subcomputation for <b>while.41</b><br/>region_0.31>;
+labelloc = t;
+tooltip = " ";
+subgraph cluster_971248704 {
+style=rounded; color=black;
+label = <Subcomputation for <b>call.24</b><br/>None.23>;
+labelloc = t;
+tooltip = " ";
+969995104 [label=<<b>Parameter 0</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+971506192 [label=<<b>Parameter 1</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+971522928 [label=<<b>negate.18</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/neg
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971540240 [label=<<b>divide.19</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/div
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971545200 [label=<<b>multiply.20</b><br/>f32[]<br/><b>operand 1</b> = f32[] 0.01>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/mul
+source: /tmp/ipykernel_73165/1311716472.py:15
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971543584 [label=<<b>add.21</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/add
+source: /tmp/ipykernel_73165/1311716472.py:15
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:11
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+970319616 [label=<<b>tuple.22</b><br/>(f32[], f32[])>, shape=rect, tooltip="", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971248704
+
+969153168 [label=<<b>call.24</b><br/>(f32[], f32[])<br/><b>operand 0</b> = tuple-element 3 of arg_tuple.9 f32[]<br/><b>operand 1</b> = tuple-element 1 of arg_tuple.9 f32[]>, shape=rect, tooltip="", style="filled", fontcolor="white", color="#005005", fillcolor="#2e7d32"];
+970792896 [label=<<b>reshape.27</b><br/>f32[1]<br/><b>operand</b> = tuple-element 1 of call.24 f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/broadcast_in_dim
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#97b498", fillcolor="#c8e6c9"];
+970317344 [label=<<b>dynamic-update-slice.28</b><br/>f32[99]<br/><b>operand 0</b> = tuple-element 2 of arg_tuple.9 f32[99]{0}<br/><b>operand 2</b> = tuple-element 0 of arg_tuple.9 s32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/dynamic_update_slice
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#cbc693", fillcolor="#fff9c4"];
+970477456 [label=<<b>add.29</b><br/>s32[]<br/><b>operand 0</b> = tuple-element 0 of arg_tuple.9 s32[]<br/><b>operand 1</b> = s32[] 1>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/body/add
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971455216 [label=<<b>tuple.30</b><br/>(s32[], f32[], f32[99], f32[])<br/><b>operand 1</b> = tuple-element 0 of call.24 f32[]<br/><b>operand 3</b> = tuple-element 3 of arg_tuple.9 f32[]>, shape=rect, tooltip="", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971502144
+
+subgraph cluster_971530032 {
+style=rounded; color=black;
+label = <Subcomputation for <b>while.41</b><br/>region_1.39>;
+labelloc = t;
+tooltip = " ";
+971018304 [label=<<b>compare.38</b><br/>direction=LT<br/>pred[]<br/><b>operand 0</b> = tuple-element 0 of arg_tuple.32 s32[]<br/><b>operand 1</b> = s32[] 99>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/jvp(while)/cond/lt
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971530032
+
+971519584 [label=<<b>while.41</b><br/>(s32[], f32[], f32[99], f32[])>, shape=ellipse, tooltip="jit(&lt;lambda&gt;)/jit(main)/while
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="white", color="#005005", fillcolor="#2e7d32"];
+971516528 [label=<<b>tuple.90</b><br/>(s32[], f32[], f32[], f32[99], f32[], /*index=5*/f32[])<br/><b>operand 0</b> = s32[] 0<br/><b>operand 1</b> = f32[] 0<br/><b>operand 2</b> = f32[] 1<br/><b>operand 3</b> = tuple-element 2 of while.41 f32[99]{0}>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/while
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+subgraph cluster_971510512 {
+style=rounded; color=black;
+label = <Subcomputation for <b>while.91</b><br/>region_2.79>;
+labelloc = t;
+tooltip = " ";
+971004224 [label=<<b>subtract.54</b><br/>s32[]<br/><b>operand 0</b> = s32[] 99<br/><b>operand 1</b> = tuple-element 0 of arg_tuple.45 s32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/sub
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971485856 [label=<<b>subtract.55</b><br/>s32[]<br/><b>operand 1</b> = s32[] 1>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/sub
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+969153728 [label=<<b>dynamic-slice.56</b><br/>dynamic_slice_sizes={1}<br/>f32[1]<br/><b>operand 0</b> = tuple-element 3 of arg_tuple.45 f32[99]{0}>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/dynamic_slice
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#97b498", fillcolor="#c8e6c9"];
+971411360 [label=<<b>reshape.57</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/squeeze
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#97b498", fillcolor="#c8e6c9"];
+subgraph cluster_971448352 {
+style=rounded; color=black;
+label = <Subcomputation for <b>call.74</b><br/>None_0.73>;
+labelloc = t;
+tooltip = " ";
+971432784 [label=<<b>Parameter 0</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+964290864 [label=<<b>Parameter 1</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+968434784 [label=<<b>Parameter 2</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+970156112 [label=<<b>Parameter 3</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+971385760 [label=<<b>Parameter 4</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/closed_call", style="filled", fontcolor="black", color="#cbae82", fillcolor="#ffe0b2"];
+971474240 [label=<<b>multiply.64</b><br/>f32[]<br/><b>operand 1</b> = f32[] 0.01>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/mul
+source: /tmp/ipykernel_73165/1311716472.py:15
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971431136 [label=<<b>multiply.65</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/mul
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971523456 [label=<<b>multiply.66</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/mul
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971397776 [label=<<b>negate.67</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/neg
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+970810176 [label=<<b>divide.68</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/div
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971020656 [label=<<b>negate.69</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/neg
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971501616 [label=<<b>add.70</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/add_any
+source: /tmp/ipykernel_73165/1213653836.py:9
+/tmp/ipykernel_73165/1213653836.py:dydt:9:9
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._integrate:15:17
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971580368 [label=<<b>add.71</b><br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/add_any
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+970277008 [label=<<b>tuple.72</b><br/>(f32[], f32[])>, shape=rect, tooltip="", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971448352
+
+969147744 [label=<<b>call.74</b><br/>(f32[], f32[])<br/><b>operand 0</b> = tuple-element 4 of arg_tuple.45 f32[]<br/><b>operand 1</b> = tuple-element 5 of arg_tuple.45 f32[]<br/><b>operand 2</b> = tuple-element 1 of arg_tuple.45 f32[]<br/><b>operand 3</b> = tuple-element 2 of arg_tuple.45 f32[]>, shape=rect, tooltip="", style="filled", fontcolor="white", color="#005005", fillcolor="#2e7d32"];
+971386880 [label=<<b>add.77</b><br/>s32[]<br/><b>operand 0</b> = tuple-element 0 of arg_tuple.45 s32[]<br/><b>operand 1</b> = s32[] 1>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/body/add
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+971014544 [label=<<b>tuple.78</b><br/>(s32[], f32[], f32[], f32[99], f32[], /*index=5*/f32[])<br/><b>operand 1</b> = tuple-element 0 of call.74 f32[]<br/><b>operand 2</b> = tuple-element 1 of call.74 f32[]<br/><b>operand 3</b> = tuple-element 3 of arg_tuple.45 f32[99]{0}<br/><b>operand 4</b> = tuple-element 4 of arg_tuple.45 f32[]<br/><b>operand 5</b> = tuple-element 5 of arg_tuple.45 f32[]>, shape=rect, tooltip="", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971510512
+
+subgraph cluster_971435408 {
+style=rounded; color=black;
+label = <Subcomputation for <b>while.91</b><br/>region_3.89>;
+labelloc = t;
+tooltip = " ";
+971537440 [label=<<b>compare.88</b><br/>direction=LT<br/>pred[]<br/><b>operand 0</b> = tuple-element 0 of arg_tuple.80 s32[]<br/><b>operand 1</b> = s32[] 99>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/transpose(jvp(while))/cond/lt
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+
+}  // cluster_971435408
+
+970989872 [label=<<b>while.91</b><br/>(s32[], f32[], f32[], f32[99], f32[], /*index=5*/f32[])>, shape=ellipse, tooltip="jit(&lt;lambda&gt;)/jit(main)/while
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="white", color="#005005", fillcolor="#2e7d32"];
+971487584 [label=<<b>get-tuple-element.93</b><br/>index=1<br/>f32[]>, shape=rect, tooltip="jit(&lt;lambda&gt;)/jit(main)/while
+source: /tmp/ipykernel_73165/1311716472.py:22
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler.<locals>._forward_pass:22:10
+/tmp/ipykernel_73165/1311716472.py:forward_pass_explicit_Euler:27:9
+/tmp/ipykernel_73165/2370764730.py:<lambda>:2:20
+/tmp/ipykernel_73165/2835298322.py:viz_computational_graph:24:8
+/tmp/ipykernel_73165/4151909682.py:<module>:1
+<frozen runpy>:_run_code:88:4
+<frozen runpy>:_run_module_as_main:198:11", style="filled", fontcolor="black", color="#9e9e9e", fillcolor="white"];
+cluster_971014288 [label=<ROOT>, shape=circle, tooltip=" ", style="filled", fontcolor="black", color="#8c7b75", fillcolor="#bcaaa4"];
+971379104 -> 971491984 [arrowhead=empty tooltip="Arg_0.1 -> multiply.7"  headlabel="0", labeldistance=2];
+971379104 -> 971491984 [arrowhead=empty tooltip="Arg_0.1 -> multiply.7"  headlabel="1", labeldistance=2];
+971491984 -> 971515408 [arrowhead=empty tooltip="multiply.7 -> divide.8"  headlabel="1", labeldistance=2];
+969146624 -> 971519056 [arrowhead=empty tooltip="broadcast.3 -> tuple.40"  headlabel="2", labeldistance=2];
+971379104 -> 971519056 [arrowhead=empty tooltip="Arg_0.1 -> tuple.40"  headlabel="3", labeldistance=2];
+971455216 -> 971519584 [ltail="cluster_971502144", style="dashed" tooltip="region_0.31 -> while.41"];
+970319616 -> 969153168 [ltail="cluster_971248704", style="dashed" tooltip="None.23 -> call.24"];
+971506192 -> 971522928 [arrowhead=empty tooltip="Arg_1.16 -> negate.18" ];
+971522928 -> 971540240 [arrowhead=empty tooltip="negate.18 -> divide.19"  headlabel="0", labeldistance=2];
+969995104 -> 971540240 [arrowhead=empty tooltip="Arg_0.15 -> divide.19"  headlabel="1", labeldistance=2];
+971540240 -> 971545200 [arrowhead=empty tooltip="divide.19 -> multiply.20"  headlabel="0", labeldistance=2];
+971506192 -> 971543584 [arrowhead=empty tooltip="Arg_1.16 -> add.21"  headlabel="0", labeldistance=2];
+971545200 -> 971543584 [arrowhead=empty tooltip="multiply.20 -> add.21"  headlabel="1", labeldistance=2];
+971543584 -> 970319616 [arrowhead=empty tooltip="add.21 -> tuple.22"  headlabel="0", labeldistance=2];
+971522928 -> 970319616 [arrowhead=empty tooltip="negate.18 -> tuple.22"  headlabel="1", labeldistance=2];
+969153168 -> 970792896 [arrowhead=empty tooltip="call.24 -> reshape.27" ];
+970792896 -> 970317344 [arrowhead=empty tooltip="reshape.27 -> dynamic-update-slice.28"  headlabel="1", labeldistance=2];
+970477456 -> 971455216 [arrowhead=empty tooltip="add.29 -> tuple.30"  headlabel="0", labeldistance=2];
+969153168 -> 971455216 [arrowhead=empty tooltip="call.24 -> tuple.30"  headlabel="1", labeldistance=2];
+970317344 -> 971455216 [arrowhead=empty tooltip="dynamic-update-slice.28 -> tuple.30"  headlabel="2", labeldistance=2];
+971018304 -> 971519584 [ltail="cluster_971530032", style="dashed" tooltip="region_1.39 -> while.41"];
+971519056 -> 971519584 [arrowhead=empty tooltip="tuple.40 -> while.41" ];
+971519584 -> 971516528 [arrowhead=empty tooltip="while.41 -> tuple.90"  headlabel="3", labeldistance=2];
+971379104 -> 971516528 [arrowhead=empty tooltip="Arg_0.1 -> tuple.90"  headlabel="4", labeldistance=2];
+971515408 -> 971516528 [arrowhead=empty tooltip="divide.8 -> tuple.90"  headlabel="5", labeldistance=2];
+971014544 -> 970989872 [ltail="cluster_971510512", style="dashed" tooltip="region_2.79 -> while.91"];
+971004224 -> 971485856 [arrowhead=empty tooltip="subtract.54 -> subtract.55"  headlabel="0", labeldistance=2];
+971485856 -> 969153728 [arrowhead=empty tooltip="subtract.55 -> dynamic-slice.56"  headlabel="1", labeldistance=2];
+969153728 -> 971411360 [arrowhead=empty tooltip="dynamic-slice.56 -> reshape.57" ];
+970277008 -> 969147744 [ltail="cluster_971448352", style="dashed" tooltip="None_0.73 -> call.74"];
+970156112 -> 971474240 [arrowhead=empty tooltip="Arg_3.61 -> multiply.64"  headlabel="0", labeldistance=2];
+971474240 -> 971431136 [arrowhead=empty tooltip="multiply.64 -> multiply.65"  headlabel="0", labeldistance=2];
+964290864 -> 971431136 [arrowhead=empty tooltip="Arg_1.59 -> multiply.65"  headlabel="1", labeldistance=2];
+971431136 -> 971523456 [arrowhead=empty tooltip="multiply.65 -> multiply.66"  headlabel="0", labeldistance=2];
+971385760 -> 971523456 [arrowhead=empty tooltip="Arg_4.62 -> multiply.66"  headlabel="1", labeldistance=2];
+971523456 -> 971397776 [arrowhead=empty tooltip="multiply.66 -> negate.67" ];
+971474240 -> 970810176 [arrowhead=empty tooltip="multiply.64 -> divide.68"  headlabel="0", labeldistance=2];
+971432784 -> 970810176 [arrowhead=empty tooltip="Arg_0.58 -> divide.68"  headlabel="1", labeldistance=2];
+970810176 -> 971020656 [arrowhead=empty tooltip="divide.68 -> negate.69" ];
+970156112 -> 971501616 [arrowhead=empty tooltip="Arg_3.61 -> add.70"  headlabel="0", labeldistance=2];
+971020656 -> 971501616 [arrowhead=empty tooltip="negate.69 -> add.70"  headlabel="1", labeldistance=2];
+968434784 -> 971580368 [arrowhead=empty tooltip="Arg_2.60 -> add.71"  headlabel="0", labeldistance=2];
+971397776 -> 971580368 [arrowhead=empty tooltip="negate.67 -> add.71"  headlabel="1", labeldistance=2];
+971580368 -> 970277008 [arrowhead=empty tooltip="add.71 -> tuple.72"  headlabel="0", labeldistance=2];
+971501616 -> 970277008 [arrowhead=empty tooltip="add.70 -> tuple.72"  headlabel="1", labeldistance=2];
+971411360 -> 969147744 [arrowhead=empty tooltip="reshape.57 -> call.74"  headlabel="4", labeldistance=2];
+971386880 -> 971014544 [arrowhead=empty tooltip="add.77 -> tuple.78"  headlabel="0", labeldistance=2];
+969147744 -> 971014544 [arrowhead=empty tooltip="call.74 -> tuple.78"  headlabel="1", labeldistance=2];
+969147744 -> 971014544 [arrowhead=empty tooltip="call.74 -> tuple.78"  headlabel="2", labeldistance=2];
+971537440 -> 970989872 [ltail="cluster_971435408", style="dashed" tooltip="region_3.89 -> while.91"];
+971516528 -> 970989872 [arrowhead=empty tooltip="tuple.90 -> while.91" ];
+970989872 -> 971487584 [arrowhead=empty tooltip="while.91 -> get-tuple-element.93" ];
+970989872 -> cluster_971014288 [tooltip=" "];
+}
